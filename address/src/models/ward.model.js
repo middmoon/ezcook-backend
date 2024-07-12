@@ -61,7 +61,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ['district_code'],
         },
       ],
-    },
+    }
   );
 
   return Ward;

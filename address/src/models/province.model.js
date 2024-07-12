@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const { Model } = require("sequelize");
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Province extends Model {
     /**
@@ -11,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Province.belongsTo(models.AdministrativeRegion, {
-        foreignKey: "administrative_region_id",
+        foreignKey: 'administrative_region_id',
       });
       Province.belongsTo(models.AdministrativeUnit, {
-        foreignKey: "administrative_unit_id",
+        foreignKey: 'administrative_unit_id',
       });
     }
   }
@@ -49,19 +49,19 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "Province",
-      tableName: "provinces",
+      modelName: 'Province',
+      tableName: 'provinces',
       timestamps: false,
-      charset: "utf8",
-      collate: "utf8_general_ci",
+      charset: 'utf8',
+      collate: 'utf8_general_ci',
       indexes: [
         {
           unique: false,
-          fields: ["administrative_unit_id"],
+          fields: ['administrative_unit_id'],
         },
         {
           unique: false,
-          fields: ["administrative_region_id"],
+          fields: ['administrative_region_id'],
         },
       ],
     }

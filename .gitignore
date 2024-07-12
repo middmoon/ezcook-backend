@@ -1,3 +1,7 @@
 /address/node_modules
 /address/package-lock.json
 /address/.env
+/auth/.env
+/auth/node_modules
+/auth/package-lock.json
+/gateway

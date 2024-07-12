@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+'use strict';
+require('dotenv').config;
+
+const express = require('express');
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
+  res.render('index', {
+    title: 'ADDRESS_SERVER running at port: ' + process.env.ADDRESS_SERVER_PORT,
+  });
 });
 
 router.get('/hello-world', (req, res, next) => {
@@ -11,6 +16,6 @@ router.get('/hello-world', (req, res, next) => {
 });
 
 // API V1
-router.use('/v1/api', require('./v1'));
+router.use('/api/v1', require('./v1'));
 
 module.exports = router;

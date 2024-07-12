@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const { Model } = require("sequelize");
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class AdministrativeRegion extends Model {
     /**
@@ -33,11 +33,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "AdministrativeRegion",
-      tableName: "administrative_regions",
+      modelName: 'AdministrativeRegion',
+      tableName: 'administrative_regions',
       timestamps: false,
-      charset: "utf8",
-      collate: "utf8_general_ci",
+      charset: 'utf8',
+      collate: 'utf8_general_ci',
     }
   );
 

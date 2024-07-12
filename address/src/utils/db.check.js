@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const db = require("../models");
+const db = require('../models');
 
 db.sequelize
   .authenticate()
@@ -13,8 +13,8 @@ db.sequelize
     console.log(`Database: ${database}`);
   })
   .then(() => {
-    console.log("Connection closed successfully.");
+    console.log('Connection closed successfully.');
   })
   .catch((error) => {
-    console.error("Unable to connect to the database:", error);
+    console.error('Unable to connect to the database:', error);
   });

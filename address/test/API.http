@@ -1,0 +1,13 @@
+@BASE_URL = http://localhost
+@ADDRESS_SERVER_PORT = 3001
+### get all provinces
+GET {{BASE_URL}}:{{ADDRESS_SERVER_PORT}}/api/v1/location/province
+
+### get all districts by province_code -- /api/v1/location/ward/:province_code
+GET {{BASE_URL}}:{{ADDRESS_SERVER_PORT}}/api/v1/location/district/01
+
+### get all ward by districts_code -- /api/v1/location/ward/:districts_code
+GET {{BASE_URL}}:{{ADDRESS_SERVER_PORT}}/api/v1/location/ward/001
+
+### search location by name
+GET {{BASE_URL}}:{{ADDRESS_SERVER_PORT}}/api/v1/location/search?query=Đà Lạt
