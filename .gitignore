@@ -4,4 +4,6 @@
 /auth/.env
 /auth/node_modules
 /auth/package-lock.json
-/gateway
+/gateway/node_modules
+/gateway/.env.example
+/gateway/package-lock.json

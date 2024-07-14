@@ -11,10 +11,6 @@ router.get('/', (req, res, next) => {
   });
 });
 
-router.get('/hello-world', (req, res, next) => {
-  res.render('index', { title: 'Hello world!!' });
-});
-
 // API V1
 router.use('/api/v1', require('./v1'));
 
